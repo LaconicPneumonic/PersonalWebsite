@@ -7,7 +7,20 @@
     <v-row v-for="item in items" :key="item.title">
       <v-col>
         <Section :title="item.title">
-          <div>{{ item.content }}</div>
+          <resume-list v-if="item.title === 'Links'" :details="item.content">
+            <template v-slot:default="slotProps">
+              <v-btn
+                :href="slotProps.item"
+                target="_blank"
+                depressed
+                text
+                plain
+              >
+                {{ slotProps.item }}
+              </v-btn>
+            </template>
+          </resume-list>
+          <div v-else>{{ item.content }}</div>
         </Section>
       </v-col>
     </v-row>
@@ -17,6 +30,7 @@
 <script>
 import Section from "@/components/Section.vue";
 import Profile from "./Profile.vue";
+import ResumeList from "./ResumeList.vue";
 export default {
   data: () => ({
     items: [
@@ -31,7 +45,10 @@ export default {
       },
       {
         title: "Links",
-        content: "https://www.linkedin.com/in/anthony-rolland/",
+        content: [
+          "https://www.linkedin.com/in/anthony-rolland/",
+          "https://www.twitter.com/Anthony52182757",
+        ],
       },
       {
         title: "Software Skills",
@@ -42,6 +59,7 @@ export default {
   components: {
     Section,
     Profile,
+    ResumeList,
   },
 };
 </script>

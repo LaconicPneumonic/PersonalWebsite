@@ -13,16 +13,14 @@
     <v-expand-transition>
       <div v-show="show">
         <v-divider></v-divider>
-
-        <v-card-text>
-          {{ details }}
-        </v-card-text>
+        <resume-list :details="details"> </resume-list>
       </div>
     </v-expand-transition>
   </v-card>
 </template>
 
 <script>
+import ResumeList from "./ResumeList.vue";
 export default {
   data: () => ({
     show: false,
@@ -31,7 +29,10 @@ export default {
     employer: String,
     location: String,
     timeRange: String,
-    details: String,
+    details: Array,
+  },
+  components: {
+    ResumeList,
   },
 };
 </script>

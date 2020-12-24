@@ -62,27 +62,29 @@ export default {
           employer: "Opentrons",
           location: "NYC, NY",
           timeRange: "October 2020 - Present",
-          details: `Developing software to manage covid19 diagnostics`,
+          details: ["Developing software to manage covid19 diagnostics"],
         },
         {
           employer: "Bridgewater Associates",
           location: "Norwalk, CT",
           timeRange: "September 2019 - August 2020",
-          details: `Created strategies to improve Bridgewater’s algorithmic execution logic for futures and fixed income markets
-Contributed asset class agnostic patterns in a distributed, asynchronous system so logic could be easily reused across the entire portfolio and delivered functionality to coordinate buys and sells to obey regulatory requirements
-Worked in a distributed processing system to develop scalable, performance critical code while maintaining transparency for user oversight and ex-post analytics
-Participated in mature SDLC including continuous validation, quality assurance processes, branch/code management, and incremental go-live verification
-Collaborated with product managers and traders to understand business requirements, comply with regulatory implications, and create/implement specs for trading execution logic in various securities
-`,
+          details: [
+            "Created strategies to improve Bridgewater’s algorithmic execution logic for futures and fixed income markets",
+            "Contributed asset class agnostic patterns in a distributed, asynchronous system so logic could be easily reused across the entire portfolio and delivered functionality to coordinate buys and sells to obey regulatory requirements",
+            "Worked in a distributed processing system to develop scalable, performance critical code while maintaining transparency for user oversight and ex-post analytics",
+            "Participated in mature SDLC including continuous validation, quality assurance processes, branch/code management, and incremental go-live verification",
+            "Collaborated with product managers and traders to understand business requirements, comply with regulatory implications, and create/implement specs for trading execution logic in various securities",
+          ],
         },
         {
           employer: "Google",
           location: "Mountain View, CA",
           timeRange: "June 2017 - August 2017",
-          details: `Designed and prototyped 3rd party cloud based OS for Chromebooks
-Developed pipeline in Golang to create a verified boot-capable USB flash drive
-Created key core utilities for Linux distributions in C and Golang such as init daemons and user level tools
-`,
+          details: [
+            "Designed and prototyped 3rd party cloud based OS for Chromebooks",
+            "Developed pipeline in Golang to create a verified boot-capable USB flash drive",
+            "Created key core utilities for Linux distributions in C and Golang such as init daemons and user level tools",
+          ],
         },
       ],
     },
