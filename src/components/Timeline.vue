@@ -61,13 +61,16 @@ export default {
       title: "Work",
       content: [
         {
-          employer: "Opentrons",
+          employer: "Opentrons / SWE",
           location: "NYC, NY",
           timeRange: "October 2020 - Present",
-          details: ["Developing software to manage covid19 diagnostics"],
+          details: [
+            "Developing software to manage covid19 diagnostics",
+            "Designing in Node, Express, Vue and AWS",
+          ],
         },
         {
-          employer: "Bridgewater Associates",
+          employer: "Bridgewater Associates / SWE",
           location: "Norwalk, CT",
           timeRange: "September 2019 - August 2020",
           details: [
@@ -79,7 +82,16 @@ export default {
           ],
         },
         {
-          employer: "Google",
+          employer: "Bridgewater Associates / SWE Intern",
+          location: "Norwalk, CT",
+          timeRange: "September 2019 - August 2020",
+          details: [
+            "Designed a tool to inspect network architecture for cloud based computation platforms",
+            "Implemented and delivered product, saving hundreds of employee hours a year",
+          ],
+        },
+        {
+          employer: "Google / SWE Intern",
           location: "Mountain View, CA",
           timeRange: "June 2017 - August 2017",
           details: [
