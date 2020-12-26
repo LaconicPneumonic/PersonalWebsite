@@ -1,10 +1,12 @@
 <template>
   <v-container>
     <v-row>
-      <v-col>
-        <SideBar />
+      <v-col class="secondary" md="4">
+        <div>
+          <SideBar />
+        </div>
       </v-col>
-      <v-col>
+      <v-col class="primary py-0" md="8">
         <Timeline />
       </v-col>
     </v-row>

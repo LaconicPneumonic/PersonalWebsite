@@ -2,7 +2,7 @@
   <v-list dense color="transparent">
     <v-list-item v-for="(item, i) in details" :key="i">
       <v-list-item-icon>
-        <v-icon>mdi-circle-small</v-icon>
+        <v-icon :color="color">mdi-circle-small</v-icon>
       </v-list-item-icon>
       <v-list-item-content>
         <slot :item="item">
@@ -17,6 +17,7 @@
 export default {
   props: {
     details: Array,
+    color: String,
   },
 };
 </script>

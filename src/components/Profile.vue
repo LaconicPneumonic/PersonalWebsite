@@ -14,5 +14,6 @@ export default {};
 <style scoped>
 .cropper {
   overflow: hidden;
+  border: thick solid black;
 }
 </style>

@@ -1,44 +1,46 @@
 <template>
-  <v-container>
+  <v-container class="py-0">
     <v-timeline dense>
-      <!-- <div v-for="section in sections" :key="section.title"> -->
-      <v-timeline-item hide-dot="true">
+      <v-timeline-item color="secondary" fill-dot>
         <v-row>
           <v-col>
             <Section :title="work.title"></Section>
           </v-col>
         </v-row>
       </v-timeline-item>
-      <v-timeline-item v-for="job in work.content" :key="job.employer">
+      <v-timeline-item
+        v-for="job in work.content"
+        :key="job.employer"
+        color="error"
+        fill-dot
+      >
         <v-row>
           <v-col>
             <Job v-bind="job" />
           </v-col>
         </v-row>
       </v-timeline-item>
-      <!-- </div> -->
-
-      <v-timeline-item hide-dot="true">
+      <v-timeline-item :hide-dot="true">
         <v-row>
           <v-col>
             <Section title="Education"></Section>
           </v-col>
         </v-row>
       </v-timeline-item>
-      <v-timeline-item>
+      <v-timeline-item color="error" fill-dot>
         <v-row>
           <v-col> <Education v-bind="education.content" /> </v-col>
         </v-row>
       </v-timeline-item>
 
-      <v-timeline-item hide-dot="true">
+      <v-timeline-item :hide-dot="true">
         <v-row>
           <v-col>
             <Section title="Interests"></Section>
           </v-col>
         </v-row>
       </v-timeline-item>
-      <v-timeline-item hide-dot="true">
+      <v-timeline-item :hide-dot="true">
         <v-row>
           <v-col> <interests v-bind="hobbies.content" /> </v-col>
         </v-row>
@@ -113,4 +115,7 @@ export default {
 </script>
 
 <style>
+.theme--light.v-timeline:before {
+  background: #2d3142;
+}
 </style>

@@ -6,21 +6,23 @@
 
     <v-row v-for="item in items" :key="item.title">
       <v-col>
-        <Section :title="item.title">
-          <resume-list v-if="item.title === 'Links'" :details="item.content">
+        <Section :title="item.title" color="primary--text">
+          <resume-list
+            v-if="item.title === 'Links'"
+            :details="item.content"
+            color="primary"
+          >
             <template v-slot:default="slotProps">
-              <v-btn
-                :href="slotProps.item"
-                target="_blank"
-                depressed
-                text
-                plain
-              >
-                {{ slotProps.item }}
-              </v-btn>
+              <a :href="slotProps.item">
+                <v-hover v-slot="{ hover }">
+                  <p :class="{ 'error--text': hover }">
+                    {{ slotProps.item }}
+                  </p>
+                </v-hover>
+              </a>
             </template>
           </resume-list>
-          <div v-else>{{ item.content }}</div>
+          <div class="primary--text" v-else>{{ item.content }}</div>
         </Section>
       </v-col>
     </v-row>
@@ -64,5 +66,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

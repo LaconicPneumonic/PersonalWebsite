@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ title }}</h1>
+    <h1 :class="color">{{ title }}</h1>
     <slot></slot>
   </div>
 </template>
@@ -9,9 +9,10 @@
 export default {
   props: {
     title: String,
+    color: String,
   },
 };
 </script>
 
-<style>
+<style scoped>
 </style>

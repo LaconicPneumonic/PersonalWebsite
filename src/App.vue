@@ -1,41 +1,12 @@
 <template>
-  <v-app>
-    <v-main>
+  <v-app light>
+    <v-main class="tertiary">
       <ResumeBase />
     </v-main>
   </v-app>
 </template>
 
 <script>
-/**
- * ResumeBase
- * - Sidebar
- * - TimelineWrapper
- *
- * Sidebar
- * - Profile
- * - Name
- * - sections Section[]
- * TimelineWrapper
- * - Timeline graphic thing
- * - sections Section[]
- *
- * Timeline
- * - IDK lol
- * Profile
- * - Pic
- * Section
- * - Title
- * - Content: Slot
- * Job
- * - Employer, Location, Time
- * Education
- * - Degree
- * - Institution
- * - Location
- * Interests
- * - List
- */
 import ResumeBase from "@/components/ResumeBase.vue";
 
 export default {
@@ -44,9 +15,5 @@ export default {
   components: {
     ResumeBase,
   },
-
-  data: () => ({
-    //
-  }),
 };
 </script>
